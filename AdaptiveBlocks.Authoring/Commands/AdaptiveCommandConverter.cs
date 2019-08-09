@@ -43,7 +43,7 @@ namespace AdaptiveBlocks.Commands
         {
             var jObject = JObject.Load(reader);
 
-            var typeName = jObject["type"]?.Value<string>() ?? jObject["@type"]?.Value<string>();
+            var typeName = jObject["type"]?.Value<string>() ?? jObject["Type"]?.Value<string>();
             if (typeName == null)
             {
                 throw new Exception("Required property 'type' not found on command");
