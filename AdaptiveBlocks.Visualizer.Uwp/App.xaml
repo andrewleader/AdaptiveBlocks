@@ -1,0 +1,21 @@
+﻿<Application
+    x:Class="AdaptiveBlocks.Visualizer.Uwp.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:AdaptiveBlocks"
+    xmlns:converters="using:AdaptiveBlocks.Visualizer.Uwp.Converters">
+
+    <Application.Resources>
+        <converters:BoolToVisibilityConverter x:Key="BoolToVisibilityConverter"/>
+        <converters:BoolToOpacityConverter x:Key="BoolToOpacityConverter"/>
+        <converters:NotNullToVisibilityConverter x:Key="NotNullToVisibilityConverter"/>
+        <converters:NotEmptyToVisibilityConverter x:Key="NotEmptyToVisibilityConverter"/>
+        <converters:StringToVisibilityConverter x:Key="StringToVisibilityConverter"/>
+
+        <Style x:Key="HorizontalListViewItemContainerStyle" TargetType="ListViewItem">
+            <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
+            <Setter Property="Padding" Value="0"/>
+        </Style>
+    </Application.Resources>
+
+</Application>

@@ -1,0 +1,70 @@
+﻿{
+  "view": {
+    "content": {
+      "text": [
+        "Nearby restaurants"
+      ],
+      "additionalBlocks": [
+        {
+          "view": {
+            "content": {
+              "text": [
+                "Frances",
+                "0.3 mi"
+              ],
+              "images": [ "https://picsum.photos/300?image=1080" ]
+            }
+          },
+          "hints": {
+            "column": true
+          }
+        },
+        {
+          "view": {
+            "content": {
+              "text": [
+                "Starbelly",
+                "0.5 mi"
+              ],
+              "images": [ "https://picsum.photos/300?image=946" ]
+            }
+          },
+          "optional": true,
+          "hints": {
+            "column": true
+          }
+        },
+        {
+          "view": {
+            "content": {
+              "text": [
+                "Julia's Cafe",
+                "0.9 mi"
+              ],
+              "images": [ "https://picsum.photos/300?image=1060" ]
+            }
+          },
+          "optional": true,
+          "hints": {
+            "column": true
+          }
+        },
+        {
+          "view": {
+            "content": {
+              "text": [
+                "Ushio Ramen",
+                "1.2 mi"
+              ],
+              "images": [ "https://picsum.photos/300?image=864" ]
+            }
+          },
+          "optional": true,
+          "hints": {
+            "column": true
+          }
+        }
+      ]
+    }
+  }
+}

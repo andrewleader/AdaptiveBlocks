@@ -1,0 +1,85 @@
+﻿{
+  "view": {
+    "content": {
+      "text": [
+        "Insights GM Review for August - All Stakeholders",
+        "OneDrive > Brian > Weekly Presentations > For Team > Internal Review"
+      ],
+      "images": [
+        {
+          "url": "https://user-images.githubusercontent.com/13246069/48576006-41369700-e8c8-11e8-8cd8-fb44af9a66a8.png",
+          "hints": {
+            "category": [ "document" ]
+          }
+        }
+      ]
+    },
+    "richContent": [
+      {
+        "targetedExperiences": [ "Microsoft.UserActivities.Hero" ],
+        "contentType": "application/vnd.microsoft.office.fluid",
+        "content": "<script src='https://office.com/fluid.js'/>"
+      },
+      {
+        "targetedExperiences": [ "Microsoft.UserActivities.Hero" ],
+        "contentType": "application/vnd.microsoft.card.adaptive",
+        "content": {
+          "type": "AdaptiveCard",
+          "body": [
+            {
+              "type": "Container",
+              "items": [
+                {
+                  "type": "ColumnSet",
+                  "columns": [
+                    {
+                      "type": "Column",
+                      "items": [
+                        {
+                          "type": "TextBlock",
+                          "id": "HeaderText",
+                          "size": "Large",
+                          "weight": "Bolder",
+                          "text": "Insights GM Review for August - All Stakeholders",
+                          "wrap": true,
+                          "maxLines": 3
+                        },
+                        {
+                          "type": "TextBlock",
+                          "id": "DescriptionText",
+                          "spacing": "Medium",
+                          "size": "Small",
+                          "text": "OneDrive > Brian > Weekly Presentations > For Team > Internal Review",
+                          "wrap": true,
+                          "maxLines": 2
+                        }
+                      ],
+                      "width": "stretch"
+                    },
+                    {
+                      "type": "Column",
+                      "items": [
+                        {
+                          "type": "Image",
+                          "id": "ContentImage",
+                          "url": "https://user-images.githubusercontent.com/13246069/48576006-41369700-e8c8-11e8-8cd8-fb44af9a66a8.png",
+                          "size": "Stretch"
+                        }
+                      ],
+                      "width": "90px"
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+          "version": "1.0"
+        }
+      }
+    ]
+  },
+  "hints": {
+    "category": [ "Thing.CreativeWork.DigitalDocument.PresentationDigitalDocument", "microsoft.office.document.powerpoint" ]
+  }
+}

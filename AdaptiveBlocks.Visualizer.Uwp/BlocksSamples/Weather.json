@@ -1,0 +1,112 @@
+﻿{
+  "view": {
+    "content": {
+      "text": [
+        "Today will be mostly sunny",
+        "The high will be 63 degrees, and the low will be 42 degrees"
+      ],
+      "images": [
+        {
+          "url": "http://messagecardplayground.azurewebsites.net/assets/Mostly%20Cloudy-Square.png",
+          "hints": {
+            "category": [ "icon" ]
+          }
+        }
+      ],
+      "detailedBlocks": [
+        {
+          "view": {
+            "content": {
+              "text": [
+                "Monday, April 1",
+                "63 / 44\n20% chance of rain\nWinds 5 mph NE"
+              ],
+              "images": [
+                {
+                  "url": "http://messagecardplayground.azurewebsites.net/assets/Mostly%20Cloudy-Square.png",
+                  "hints": {
+                    "placement": [ "left" ],
+                    "category": [ "icon" ]
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "view": {
+            "content": {
+              "text": [
+                "Tue",
+                "62 / 52"
+              ],
+              "images": [ "http://messagecardplayground.azurewebsites.net/assets/Mostly%20Cloudy-Square.png" ]
+            }
+          },
+          "hints": {
+            "column": true
+          }
+        },
+        {
+          "view": {
+            "content": {
+              "text": [
+                "Wed",
+                "60 / 48"
+              ],
+              "images": [ "http://messagecardplayground.azurewebsites.net/assets/Drizzle-Square.png" ]
+            }
+          },
+          "hints": {
+            "column": true
+          }
+        },
+        {
+          "view": {
+            "content": {
+              "text": [
+                "Thu",
+                "59 / 49"
+              ],
+              "images": [ "http://messagecardplayground.azurewebsites.net/assets/Mostly%20Cloudy-Square.png" ]
+            }
+          },
+          "optional": true,
+          "hints": {
+            "column": true
+          }
+        },
+        {
+          "view": {
+            "content": {
+              "text": [
+                "Fri",
+                "64 / 51"
+              ],
+              "images": [ "http://messagecardplayground.azurewebsites.net/assets/Mostly%20Cloudy-Square.png" ]
+            }
+          },
+          "optional": true,
+          "hints": {
+            "column": true
+          }
+        },
+        {
+          "view": {
+            "content": {
+              "text": [
+                "Sat",
+                "61 / 48"
+              ],
+              "images": [ "http://messagecardplayground.azurewebsites.net/assets/Drizzle-Square.png" ]
+            }
+          },
+          "optional": true,
+          "hints": {
+            "column": true
+          }
+        }
+      ]
+    }
+  }
+}

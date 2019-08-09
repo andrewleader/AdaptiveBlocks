@@ -1,0 +1,53 @@
+﻿<UserControl
+    x:Class="AdaptiveBlocks.Visualizer.Uwp.Previews.PreviewRichWatchActionsPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:AdaptiveBlocks.Visualizer.Uwp.Previews"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    d:DesignHeight="300"
+    d:DesignWidth="400">
+
+    <Grid>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" MinHeight="20"/>
+                <RowDefinition Height="Auto" MinHeight="20"/>
+            </Grid.RowDefinitions>
+            <Rectangle Fill="Gray"/>
+            <Image
+                        x:Name="HeroImage"
+                        Stretch="UniformToFill"
+                Source="{Binding FirstImage.Url}"/>
+
+            <Grid Grid.Row="1" Margin="6">
+                <ItemsControl ItemsSource="{Binding}">
+                    <ItemsControl.ItemTemplate>
+                        <DataTemplate>
+                            <Button
+                                Content="{Binding Title}"
+                                Click="Button_Click"
+                                Margin="0,0,0,6"
+                                HorizontalAlignment="Stretch"/>
+                        </DataTemplate>
+                    </ItemsControl.ItemTemplate>
+                </ItemsControl>
+            </Grid>
+        </Grid>
+
+        <Grid x:Name="InputCollection" Background="White" Visibility="Collapsed">
+            <ScrollViewer>
+                <Border
+                    x:Name="InputCollectionFields"
+                    Margin="-4,24,-4,0"/>
+            </ScrollViewer>
+            <Button
+                Style="{ThemeResource NavigationBackButtonSmallStyle}"
+                VerticalAlignment="Top"
+                HorizontalAlignment="Left"
+                x:Name="ButtonBack"
+                Click="ButtonBack_Click"/>
+        </Grid>
+    </Grid>
+</UserControl>

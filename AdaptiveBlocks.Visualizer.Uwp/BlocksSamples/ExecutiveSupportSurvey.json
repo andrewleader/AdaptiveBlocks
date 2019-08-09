@@ -1,0 +1,271 @@
+﻿{
+  "view": {
+    "content": {
+      "text": [
+        "Executive Support Satisfaction Survey",
+        "Help us improve by taking our short satisfaction survey."
+      ],
+      "actions": [
+        {
+          "type": "Action",
+          "title": "Submit",
+          "inputs": [
+            {
+              "type": "ChoiceSet",
+              "id": "satisfaction",
+              "placeholder": "Select an option",
+              "title": "1. How satisfied are you with the overall quality of your interaction with Executive Support?",
+              "choices": [
+                {
+                  "title": "Very Satisfied",
+                  "value": "4"
+                },
+                {
+                  "title": "Somewhat Satisfied",
+                  "value": "3"
+                },
+                {
+                  "title": "Somewhat Dissatisfied",
+                  "value": "2"
+                },
+                {
+                  "title": "Dissatisfied",
+                  "value": "1"
+                }
+              ]
+            },
+            {
+              "type": "TextInput",
+              "id": "elaboration",
+              "placeholder": "Add a comment",
+              "title":  "Please add any other comments regarding your recent support experience."
+            }
+          ]
+        }
+      ]
+    },
+    "richContent": [
+      {
+        "targetedExperiences": [ "Microsoft.Outlook.ActionableMessage" ],
+        "contentType": "application/vnd.microsoft.card.adaptive",
+        "content": {
+          "type": "AdaptiveCard",
+          "body": [
+            {
+              "type": "Container",
+              "style": "emphasis",
+              "items": [
+                {
+                  "type": "TextBlock",
+                  "size": "Medium",
+                  "weight": "Bolder",
+                  "text": "Executive Support Satisfaction Survey"
+                }
+              ]
+            },
+            {
+              "type": "Container",
+              "items": [
+                {
+                  "type": "TextBlock",
+                  "weight": "Bolder",
+                  "text": "Help us improve by taking our short satisfaction survey.",
+                  "wrap": true
+                }
+              ]
+            },
+            {
+              "type": "Container",
+              "items": [
+                {
+                  "type": "TextBlock",
+                  "text": "1\\. How satisfied were you with the overall quality of your interaction with Executive Support?",
+                  "wrap": true
+                },
+                {
+                  "type": "ColumnSet",
+                  "columns": [
+                    {
+                      "id": "4unselected",
+                      "type": "Column",
+                      "items": [
+                        {
+                          "type": "TextBlock",
+                          "horizontalAlignment": "Center",
+                          "text": "Very Satisfied"
+                        },
+                        {
+                          "type": "Image",
+                          "horizontalAlignment": "Center",
+                          "spacing": "Small",
+                          "url": "https://www.publicdomainpictures.net/pictures/130000/velka/clip-art-smiley-face.jpg",
+                          "size": "Medium"
+                        }
+                      ],
+                      "width": "stretch",
+                      "selectAction": {
+                        "type": "Action.ToggleVisibility",
+                        "targetElements": [
+                          {
+                            "elementId": "4unselected",
+                            "isVisible": false
+                          },
+                          {
+                            "elementId": "4selected",
+                            "isVisible": true
+                          },
+                          {
+                            "elementId": "3unselected",
+                            "isVisible": true
+                          },
+                          {
+                            "elementId": "3selected",
+                            "isVisible": false
+                          },
+                          {
+                            "elementId": "2unselected",
+                            "isVisible": true
+                          },
+                          {
+                            "elementId": "2selected",
+                            "isVisible": false
+                          },
+                          {
+                            "elementId": "1unselected",
+                            "isVisible": true
+                          },
+                          {
+                            "elementId": "1selected",
+                            "isVisible": false
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "id": "3unselected",
+                      "type": "Column",
+                      "items": [
+                        {
+                          "type": "TextBlock",
+                          "horizontalAlignment": "Center",
+                          "text": "Somewhat Satisfied"
+                        },
+                        {
+                          "type": "Image",
+                          "horizontalAlignment": "Center",
+                          "spacing": "Small",
+                          "url": "https://www.publicdomainpictures.net/pictures/130000/velka/clip-art-smiley-face.jpg",
+                          "size": "Medium"
+                        }
+                      ],
+                      "width": "stretch",
+                      "selectAction": {
+                        "type": "Action.ToggleVisibility",
+                        "targetElements": [
+                          {
+                            "elementId": "4unselected",
+                            "isVisible": true
+                          },
+                          {
+                            "elementId": "4selected",
+                            "isVisible": false
+                          },
+                          {
+                            "elementId": "3unselected",
+                            "isVisible": false
+                          },
+                          {
+                            "elementId": "3selected",
+                            "isVisible": true
+                          },
+                          {
+                            "elementId": "2unselected",
+                            "isVisible": true
+                          },
+                          {
+                            "elementId": "2selected",
+                            "isVisible": false
+                          },
+                          {
+                            "elementId": "1unselected",
+                            "isVisible": true
+                          },
+                          {
+                            "elementId": "1selected",
+                            "isVisible": false
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "Column",
+                      "items": [
+                        {
+                          "type": "TextBlock",
+                          "horizontalAlignment": "Center",
+                          "text": "Somewhat Dissatisfied"
+                        },
+                        {
+                          "type": "Image",
+                          "horizontalAlignment": "Center",
+                          "spacing": "Small",
+                          "url": "https://www.publicdomainpictures.net/pictures/130000/velka/clip-art-smiley-face.jpg",
+                          "size": "Medium"
+                        }
+                      ],
+                      "width": "stretch"
+                    },
+                    {
+                      "type": "Column",
+                      "items": [
+                        {
+                          "type": "TextBlock",
+                          "horizontalAlignment": "Center",
+                          "text": "Dissatisfied"
+                        },
+                        {
+                          "type": "Image",
+                          "horizontalAlignment": "Center",
+                          "spacing": "Small",
+                          "url": "https://www.publicdomainpictures.net/pictures/130000/velka/clip-art-smiley-face.jpg",
+                          "size": "Medium"
+                        }
+                      ],
+                      "width": "stretch"
+                    }
+                  ]
+                },
+                {
+                  "type": "TextBlock",
+                  "text": "Please add any other comments regarding your recent support experience.",
+                  "wrap": true
+                },
+                {
+                  "type": "Input.Text",
+                  "id": "comment",
+                  "placeholder": "Add a comment",
+                  "isMultiline": true
+                },
+                {
+                  "type": "ActionSet",
+                  "actions": [
+                    {
+                      "id": "submit4",
+                      "type": "Action.Http",
+                      "title": "Submit",
+                      "method": "POST",
+                      "url": "https://actionsplayground.azurewebsites.net/workspaces/IREXSqpHRk-hkfa7y7CAAw",
+                      "body": "verySatisfied: {{comment.value}}"
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+          "version": "1.0"
+        }
+      }
+    ]
+  }
+}

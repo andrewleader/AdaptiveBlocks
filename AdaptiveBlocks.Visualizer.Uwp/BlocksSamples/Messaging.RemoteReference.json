@@ -1,0 +1,24 @@
+﻿{
+  "data": {
+    "from": "Jill Bender",
+    "message": "Check out where we camped last weekend! It was incredible, wish you could have come on the backpacking trip!",
+    "attachedPicture": "https://unsplash.it/360/180?image=1043",
+    "profileImage": "https://unsplash.it/64?image=1027"
+  },
+  "entities": [
+    {
+      "namespace": "schema.org",
+      "type": "Message",
+      "value": {
+        "@context": "http://schema.org",
+        "@type": "Message",
+        "sender": {
+          "@type": "Person",
+          "name": "{{from}}"
+        },
+        "text": "{{message}}"
+      }
+    }
+  ],
+  "view": "https://adaptivecards-ex-templates.azurewebsites.net/api/templates/Leader.Blocks.Messaging.View"
+}

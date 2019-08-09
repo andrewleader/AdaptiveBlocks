@@ -1,0 +1,60 @@
+﻿{
+  "view": {
+    "content": {
+      "text": [
+        "Get ride",
+        "Work in 1 hour 45 min | Home in 12 min"
+      ],
+      "detailedBlocks": [
+        {
+          "view": {
+            "content": {
+              "text": [
+                "Get ride",
+                "Ride in 4 min"
+              ]
+            }
+          }
+        },
+        {
+          "view": {
+            "content": {
+              "text": [
+                "Work",
+                "44 miles | 1 hour 45 min | $31.41"
+              ],
+              "images": [
+                {
+                  "url": "https://www.shareicon.net/data/512x512/2016/11/14/852126_briefcase_512x512.png",
+                  "supportedThemes": [ "light", "tinting" ],
+                  "hints": {
+                    "category": [ "icon" ]
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "view": {
+            "content": {
+              "text": [
+                "Home",
+                "12 miles | 12 min | $9.00"
+              ],
+              "images": [
+                {
+                  "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Home-icon.svg/1024px-Home-icon.svg.png",
+                  "supportedThemes": [ "light", "tinting" ],
+                  "hints": {
+                    "category": [ "icon" ]
+                  }
+                }
+              ]
+            }
+          }
+        }
+      ]
+    }
+  }
+}

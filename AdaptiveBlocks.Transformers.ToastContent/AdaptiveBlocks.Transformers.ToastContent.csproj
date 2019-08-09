@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <AssemblyName>AdaptiveBlocks.Transformers.ToastContentTransformer</AssemblyName>
+    <RootNamespace>AdaptiveBlocks.Transformers.ToastContentTransformer</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Toolkit.Uwp.Notifications" Version="5.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\AdaptiveBlocks.Authoring\AdaptiveBlocks.Authoring.csproj" />
+    <ProjectReference Include="..\AdaptiveBlocks.Transformers\AdaptiveBlocks.Transformers.csproj" />
+  </ItemGroup>
+
+</Project>

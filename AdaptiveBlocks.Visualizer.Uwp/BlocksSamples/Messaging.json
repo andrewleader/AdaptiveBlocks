@@ -1,0 +1,48 @@
+﻿{
+  "view": {
+    "content": {
+      "text": [
+        "Jill Bender",
+        "Check out where we camped last weekend! It was incredible, wish you could have come on the backpacking trip!"
+      ],
+      "images": [
+        "https://unsplash.it/360/180?image=1043",
+        {
+          "url": "https://unsplash.it/64?image=1027",
+          "hints": {
+            "category": [ "profile" ]
+          }
+        }
+      ],
+      "actions": [
+        {
+          "type": "Action",
+          "title": "Reply",
+          "icon": {
+            "url": "https://maxcdn.icons8.com/Share/icon/Arrows/reply_all_arrow1600.png",
+            "altIcon": {
+              "url": "https://www.materialui.co/materialIcons/content/reply_white_192x192.png",
+              "supportedThemes": [ "dark" ]
+            }
+          },
+          "inputs": [
+            {
+              "type": "TextInput",
+              "id": "response",
+              "placeholder": "Reply"
+            }
+          ],
+          "command": {
+            "type": "HttpRequest",
+            "method": "POST",
+            "url": "https://skype.com/sendreply",
+            "requiresAuth": true
+          }
+        }
+      ]
+    }
+  },
+  "hints": {
+    "category": [ "Thing.CreativeWork.Message" ]
+  }
+}

@@ -1,0 +1,21 @@
+﻿{
+  "view": {
+    "content": {
+      "text": [
+        "CS346 Fall 2014 Design",
+        "John Hartman"
+      ],
+      "images": [
+        {
+          "url": "https://user-images.githubusercontent.com/13246069/49112035-91a5e100-f246-11e8-9ce0-e615a6ea5904.png",
+          "hints": {
+            "category": [ "document" ]
+          }
+        }
+      ]
+    }
+  },
+  "hints": {
+    "category": [ "Thing.CreativeWork.DigitalDocument.PresentationDigitalDocument", "google.docs.slide" ]
+  }
+}

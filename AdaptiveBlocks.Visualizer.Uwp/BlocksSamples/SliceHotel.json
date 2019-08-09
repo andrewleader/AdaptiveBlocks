@@ -1,0 +1,90 @@
+﻿{
+  "view": {
+    "content": {
+      "text": [
+        "Upcoming trip: Seattle",
+        "June 12-19 · 2 guests"
+      ],
+      "images": [
+        {
+          "url": "https://picsum.photos/200/300?image=1065",
+          "hints": {
+            "category": [ "featured" ]
+          }
+        }
+      ],
+      "detailedBlocks": [
+        {
+          "view": {
+            "content": {
+              "text": [
+                "Upcoming trip: Seattle",
+                "June 12-19 · 2 guests"
+              ],
+              "images": [
+                {
+                  "url": "https://picsum.photos/200/300?image=1065",
+                  "hints": {
+                    "category": [ "featured" ]
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "view": {
+            "content": {
+              "text": [
+                "Check in",
+                "12:00 PM, Jun 12"
+              ]
+            }
+          },
+          "hints": {
+            "column": true
+          }
+        },
+        {
+          "view": {
+            "content": {
+              "text": [
+                "Check out",
+                "11:00 AM, Jun 19"
+              ]
+            }
+          },
+          "hints": {
+            "column": true
+          }
+        },
+        {
+          "view": {
+            "content": {
+              "actions": [
+                {
+                  "type": "Action",
+                  "title": "View Location"
+                },
+                {
+                  "type": "Action",
+                  "title": "Share"
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "actions": [
+        {
+          "type": "Action",
+          "title": "View Location"
+        },
+        {
+          "type": "Action",
+          "title": "Share"
+        }
+      ]
+    }
+  }
+}

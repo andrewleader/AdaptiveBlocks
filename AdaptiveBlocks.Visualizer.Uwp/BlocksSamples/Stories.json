@@ -1,0 +1,49 @@
+﻿{
+  "view": {
+    "content": {
+      "text": [
+        "Today's Top News",
+        "President signs new bill"
+      ],
+      "images": [ "https://picsum.photos/600/250?image=1076" ],
+      "detailedBlocks": [
+        {
+          "view": {
+            "content": {
+              "text": [
+                "Today's Top News",
+                "President signs new bill"
+              ],
+              "images": [ "https://picsum.photos/600/250?image=1076" ],
+              "hints": {
+                "category": [ "featured" ]
+              }
+            }
+          }
+        },
+        {
+          "view": {
+            "content": {
+              "text": [
+                "Bull Market Continues to Rally",
+                "The market reacts positively to the increased..."
+              ],
+              "images": [ "https://picsum.photos/60?image=1075" ]
+            }
+          }
+        },
+        {
+          "view": {
+            "content": {
+              "text": [
+                "Forest Fires Spread",
+                "The dry season has resulted in record breaking..."
+              ],
+              "images": [ "https://picsum.photos/60?image=1074" ]
+            }
+          }
+        }
+      ]
+    }
+  }
+}

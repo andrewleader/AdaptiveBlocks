@@ -1,0 +1,65 @@
+﻿{
+  "view": {
+    "content": {
+      "text": "Time to wake up!",
+      "actions": [
+        {
+          "type": "SharedInputActions",
+          "actions": [
+            {
+              "title": "Snooze",
+              "command": {
+                "type": "Submit",
+                "data": {
+                  "action": "snooze",
+                  "alarmId": "1945"
+                }
+              }
+            },
+            {
+              "title": "Dismiss",
+              "command": {
+                "type": "Submit",
+                "data": {
+                  "action": "dismiss",
+                  "alarmId": "1945"
+                }
+              }
+            }
+          ],
+          "inputs": [
+            {
+              "type": "InputsGroup",
+              "text": "To prove you're awake, select which of the following fruits is yellow...",
+              "inputs": [
+                {
+                  "type": "ChoiceSet",
+                  "id": "answer",
+                  "placeholder": "Select an option",
+                  "choices": [
+                    {
+                      "title": "Orange",
+                      "value": "wrong"
+                    },
+                    {
+                      "title": "Blueberry",
+                      "value": "wrong"
+                    },
+                    {
+                      "title": "Banana",
+                      "value": "right"
+                    },
+                    {
+                      "title": "Avacado",
+                      "value": "wrong"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

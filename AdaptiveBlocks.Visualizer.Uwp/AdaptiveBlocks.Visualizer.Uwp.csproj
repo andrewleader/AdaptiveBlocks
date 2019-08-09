@@ -1,0 +1,466 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProjectGuid>{1FAFA92D-45EC-4225-BC08-92C3C4D66C32}</ProjectGuid>
+    <OutputType>AppContainerExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AdaptiveBlocks.Visualizer.Uwp</RootNamespace>
+    <AssemblyName>AdaptiveBlocks.Visualizer.Uwp</AssemblyName>
+    <DefaultLanguage>en-US</DefaultLanguage>
+    <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
+    <TargetPlatformVersion Condition=" '$(TargetPlatformVersion)' == '' ">10.0.18362.0</TargetPlatformVersion>
+    <TargetPlatformMinVersion>10.0.17134.0</TargetPlatformMinVersion>
+    <MinimumVisualStudioVersion>14</MinimumVisualStudioVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{A5A43C5B-DE2A-4C0C-9213-0A381AF9435A};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WindowsXamlEnableOverview>true</WindowsXamlEnableOverview>
+    <PackageCertificateKeyFile>AdaptiveBlocks_TemporaryKey.pfx</PackageCertificateKeyFile>
+    <GenerateAppInstallerFile>True</GenerateAppInstallerFile>
+    <AppxAutoIncrementPackageRevision>True</AppxAutoIncrementPackageRevision>
+    <AppxBundle>Never</AppxBundle>
+    <AppInstallerUri>\\scratch2\scratch\aleader\AdaptiveBlocks</AppInstallerUri>
+    <AppInstallerUpdateFrequency>1</AppInstallerUpdateFrequency>
+    <AppInstallerCheckForUpdateFrequency>OnApplicationRun</AppInstallerCheckForUpdateFrequency>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+    <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|ARM'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\ARM\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>ARM</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|ARM'">
+    <OutputPath>bin\ARM\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>ARM</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+    <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+    <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RestoreProjectStyle>PackageReference</RestoreProjectStyle>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CircleImage.cs" />
+    <Compile Include="Controls\Designer\BlockControl.xaml.cs">
+      <DependentUpon>BlockControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\PagesControl.cs" />
+    <Compile Include="Converters\BoolToOpacityConverter.cs" />
+    <Compile Include="Converters\BoolToVisibilityConverter.cs" />
+    <Compile Include="Converters\ContentViewModelTemplateSelector.cs" />
+    <Compile Include="Converters\DocumentViewModelToPreviewPaneConverter.cs" />
+    <Compile Include="Converters\NotEmptyToVisibilityConverter.cs" />
+    <Compile Include="Converters\NotNullToVisibilityConverter.cs" />
+    <Compile Include="Converters\StringToVisibilityConverter.cs" />
+    <Compile Include="Helpers\ConnectedAnimations.cs" />
+    <Compile Include="Helpers\ListHelpers.cs" />
+    <Compile Include="Helpers\VisualTreeHelpers.cs" />
+    <Compile Include="Helpers\WeakEventHandler.cs" />
+    <Compile Include="MainPage.xaml.cs">
+      <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Previews\BasePreviewBlockHost.cs" />
+    <Compile Include="Previews\IPreviewBlockHost.cs" />
+    <Compile Include="Previews\PreviewAndroidNotification.xaml.cs">
+      <DependentUpon>PreviewAndroidNotification.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Previews\PreviewAudioHost.xaml.cs">
+      <DependentUpon>PreviewAudioHost.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Previews\PreviewAudioHostPrompt.xaml.cs">
+      <DependentUpon>PreviewAudioHostPrompt.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Previews\PreviewEchoSpot.xaml.cs">
+      <DependentUpon>PreviewEchoSpot.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Previews\PreviewFullBlockHost.cs" />
+    <Compile Include="Previews\PreviewGitHubPullRequest.xaml.cs">
+      <DependentUpon>PreviewGitHubPullRequest.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Previews\PreviewJumplist.xaml.cs">
+      <DependentUpon>PreviewJumplist.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Previews\PreviewOutlookActionableMessage.xaml.cs">
+      <DependentUpon>PreviewOutlookActionableMessage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Previews\PreviewRecentActivities.xaml.cs">
+      <DependentUpon>PreviewRecentActivities.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Previews\PreviewRichWatch.xaml.cs">
+      <DependentUpon>PreviewRichWatch.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Previews\PreviewRichWatchActionsPage.xaml.cs">
+      <DependentUpon>PreviewRichWatchActionsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Previews\PreviewRichWatchBlock.xaml.cs">
+      <DependentUpon>PreviewRichWatchBlock.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Previews\PreviewRowsBlockHost.cs" />
+    <Compile Include="Previews\PreviewSimpleBlockHost.cs" />
+    <Compile Include="Previews\PreviewTimelineAndroid.xaml.cs">
+      <DependentUpon>PreviewTimelineAndroid.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Previews\PreviewTimelineWebFullSize.xaml.cs">
+      <DependentUpon>PreviewTimelineWebFullSize.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Previews\PreviewTimelineWebFullSizeTemplates\PreviewTimelineWebFullSizeMessageTemplate.xaml.cs">
+      <DependentUpon>PreviewTimelineWebFullSizeMessageTemplate.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Previews\PreviewTimelineWebFullSizeTemplates\PreviewTimelineWebFullSizeMessageViewModel.cs" />
+    <Compile Include="Previews\PreviewTimelineWebHighDensity.xaml.cs">
+      <DependentUpon>PreviewTimelineWebHighDensity.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Previews\PreviewToastCardHost.xaml.cs">
+      <DependentUpon>PreviewToastCardHost.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Previews\PreviewToastHost.xaml.cs">
+      <DependentUpon>PreviewToastHost.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Renderer\AdaptiveBlockAttributionIconExtensions.cs" />
+    <Compile Include="Renderer\AdaptiveBlockImageExtensions.cs" />
+    <Compile Include="RichRendererPreviewPage.xaml.cs">
+      <DependentUpon>RichRendererPreviewPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="RichRenderer\BlockColumnControl.xaml.cs">
+      <DependentUpon>BlockColumnControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="RichRenderer\BlockControl.cs" />
+    <Compile Include="RichRenderer\BlockRowControl.xaml.cs">
+      <DependentUpon>BlockRowControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="RichRenderer\BlocksControl.xaml.cs">
+      <DependentUpon>BlocksControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="RichRenderer\BlocksPanel.cs" />
+    <Compile Include="RichRenderer\DetermineTextBlockFitContainer.cs" />
+    <Compile Include="RichRenderer\FactSetItemControl.xaml.cs">
+      <DependentUpon>FactSetItemControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="RichRenderer\RenderableBlockData.cs" />
+    <Compile Include="RichRenderer\RichRendererControl.xaml.cs">
+      <DependentUpon>RichRendererControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Settings\OverallSettings.cs" />
+    <Compile Include="Settings\PayloadEditorSettings.cs" />
+    <Compile Include="Settings\SettingsValueHelper.cs" />
+    <Compile Include="TransformedCardPreviewPage.xaml.cs">
+      <DependentUpon>TransformedCardPreviewPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModels\BindableBase.cs" />
+    <Compile Include="ViewModels\Documents\AddDocumentListItem.cs" />
+    <Compile Include="ViewModels\Documents\BaseDocumentsViewModel.cs" />
+    <Compile Include="ViewModels\Documents\BaseDocumentViewModel.cs" />
+    <Compile Include="ViewModels\Documents\BlocksDocumentsViewModel.cs" />
+    <Compile Include="ViewModels\Documents\BlocksDocumentViewModel.cs" />
+    <Compile Include="ViewModels\MainPageViewModel.cs" />
+    <Compile Include="ViewModels\PropertiesViewModel.cs" />
+    <Compile Include="Views\DocumentsView.xaml.cs">
+      <DependentUpon>DocumentsView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DocumentView.xaml.cs">
+      <DependentUpon>DocumentView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PreviewPanes\BlocksPreviewPane.xaml.cs">
+      <DependentUpon>BlocksPreviewPane.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\TabView.xaml.cs">
+      <DependentUpon>TabView.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxManifest Include="Package.appxmanifest">
+      <SubType>Designer</SubType>
+    </AppxManifest>
+    <None Include="AdaptiveBlocks_TemporaryKey.pfx" />
+    <Content Include="Assets\Apps\Edge\Square44x44Logo.png" />
+    <Content Include="Assets\Apps\GoogleSlides\Square44x44Logo.png" />
+    <Content Include="Assets\Apps\PowerPoint\Square44x44Logo.png" />
+    <Content Include="Assets\Apps\Skype\Square44x44Logo.png" />
+    <Content Include="BlocksSamples\Stories.json" />
+    <Content Include="BlocksSamples\WeatherAltGroups.json" />
+    <Content Include="BlocksSamples\Weather.json" />
+    <Content Include="BlocksSamples\Alarm.json" />
+    <Content Include="BlocksSamples\CalendarReminder.json" />
+    <Content Include="BlocksSamples\CalendarReminderOLD.json" />
+    <Content Include="BlocksSamples\SliceHotel.json" />
+    <Content Include="BlocksSamples\NowPlaying.json" />
+    <Content Include="BlocksSamples\PendingApproval.json" />
+    <Content Include="BlocksSamples\SummerRetreats.json" />
+    <Content Include="BlocksSamples\SkypeCallHistory.json" />
+    <Content Include="Previews\Microsoft.UserActivities.Hero.HostConfig.json" />
+    <Content Include="BlocksSamples\OfficeFile.json" />
+    <Content Include="Previews\Microsoft.UserActivities.Hero.HostConfig.Light.json" />
+    <Content Include="BlocksSamples\Messaging.json" />
+    <Content Include="Previews\Microsoft.Outlook.ActionableMessage.HostConfig.json" />
+    <Content Include="BlocksSamples\TinyPulseSurvey.json" />
+    <Content Include="BlocksSamples\Messaging.RemoteReference.json" />
+    <Content Include="BlocksSamples\GitHubUserActivity.json" />
+    <Content Include="BlocksSamples\GitHubReviewRequired.json" />
+    <Content Include="BlocksSamples\GoogleDocsSlide.json" />
+    <Content Include="BlocksSamples\SliceGetRide.json" />
+    <Content Include="BlocksSamples\SliceNearbyRestaurants.json" />
+    <Content Include="Previews\Microsoft.Teams.ChatMessage.HostConfig.json" />
+    <Content Include="Previews\Microsoft.Cortana.BotMessage.HostConfig.json" />
+    <Content Include="BlocksSamples\ExecutiveSupportSurvey.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Properties\Default.rd.xml" />
+    <Content Include="Assets\LockScreenLogo.scale-200.png" />
+    <Content Include="Assets\SplashScreen.scale-200.png" />
+    <Content Include="Assets\Square150x150Logo.scale-200.png" />
+    <Content Include="Assets\Square44x44Logo.scale-200.png" />
+    <Content Include="Assets\Square44x44Logo.targetsize-24_altform-unplated.png" />
+    <Content Include="Assets\StoreLogo.png" />
+    <Content Include="Assets\Wide310x150Logo.scale-200.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Page Include="Controls\Designer\BlockControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Previews\PreviewAndroidNotification.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Previews\PreviewAudioHost.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Previews\PreviewAudioHostPrompt.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Previews\PreviewEchoSpot.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Previews\PreviewGitHubPullRequest.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Previews\PreviewJumplist.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Previews\PreviewOutlookActionableMessage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Previews\PreviewRecentActivities.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Previews\PreviewRichWatch.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Previews\PreviewRichWatchActionsPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Previews\PreviewRichWatchBlock.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Previews\PreviewTimelineAndroid.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Previews\PreviewTimelineWebFullSize.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Previews\PreviewTimelineWebFullSizeTemplates\PreviewTimelineWebFullSizeMessageTemplate.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Previews\PreviewTimelineWebHighDensity.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Previews\PreviewToastCardHost.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Previews\PreviewToastHost.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="RichRendererPreviewPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="RichRenderer\BlockColumnControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="RichRenderer\BlockRowControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="RichRenderer\BlocksControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="RichRenderer\FactSetItemControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="RichRenderer\RichRendererControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Themes\Generic.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="TransformedCardPreviewPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\DocumentsView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\DocumentView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\PreviewPanes\BlocksPreviewPane.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\TabView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="AdaptiveCards">
+      <Version>1.1.0</Version>
+    </PackageReference>
+    <PackageReference Include="AdaptiveCards.Rendering.Uwp">
+      <Version>1.1.0</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform">
+      <Version>6.1.5</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Toolkit.Uwp.Notifications">
+      <Version>5.0.0</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Toolkit.Uwp.UI.Controls">
+      <Version>3.0.0</Version>
+    </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AdaptiveBlocks.Authoring\AdaptiveBlocks.Authoring.csproj">
+      <Project>{0b21b6f0-9597-4366-b730-4f7c05f61f15}</Project>
+      <Name>AdaptiveBlocks.Authoring</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\AdaptiveBlocks.SharedAdaptiveCards.Uwp\AdaptiveBlocks.SharedAdaptiveCards.Uwp.csproj">
+      <Project>{102c4a63-6fb9-40d4-9c73-01ce835c7fea}</Project>
+      <Name>AdaptiveBlocks.SharedAdaptiveCards.Uwp</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\AdaptiveBlocks.Transformers.AdaptiveCards\AdaptiveBlocks.Transformers.AdaptiveCards.csproj">
+      <Project>{112e3e85-f2e7-4f34-8834-9e73ce1a912c}</Project>
+      <Name>AdaptiveBlocks.Transformers.AdaptiveCards</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\AdaptiveBlocks.Transformers.ToastContent\AdaptiveBlocks.Transformers.ToastContent.csproj">
+      <Project>{160fe23a-55ec-4d98-8e18-73f5532f1678}</Project>
+      <Name>AdaptiveBlocks.Transformers.ToastContent</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\AdaptiveBlocks.Transformers.UserActivities\AdaptiveBlocks.Transformers.UserActivities.csproj">
+      <Project>{bec524a9-a73a-40a0-a729-db3bbf8b26c8}</Project>
+      <Name>AdaptiveBlocks.Transformers.UserActivities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\AdaptiveBlocks.Transformers\AdaptiveBlocks.Transformers.csproj">
+      <Project>{B0037B1D-B569-4BEB-B531-1C089579B64A}</Project>
+      <Name>AdaptiveBlocks.Transformers</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NotificationsVisualizerLibrary\NotificationsVisualizerLibrary.csproj">
+      <Project>{220f3a47-bec1-40ef-be2d-98a8345ab983}</Project>
+      <Name>NotificationsVisualizerLibrary</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
+    <VisualStudioVersion>14.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\WindowsXaml\v$(VisualStudioVersion)\Microsoft.Windows.UI.Xaml.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

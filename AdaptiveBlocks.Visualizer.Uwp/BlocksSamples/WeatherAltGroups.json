@@ -1,0 +1,60 @@
+﻿{
+  "type": "Block",
+  "title": "Today will be mostly sunny",
+  "subtitle": "The high will be 63 degrees, and the low will be 42 degrees",
+  "images": [
+    {
+      "url": "http://messagecardplayground.azurewebsites.net/assets/Mostly%20Cloudy-Square.png",
+      "hints": {
+        "category": [ "thumbnail" ]
+      }
+    }
+  ],
+  "detailedBlocks": [
+    {
+      "type": "Block",
+      "title": "Monday, April 1",
+      "subtitle": "63 / 44\n20% chance of rain\nWinds 5 mph NE",
+      "images": [
+        {
+          "url": "http://messagecardplayground.azurewebsites.net/assets/Mostly%20Cloudy-Square.png",
+          "hints": {
+            "placement": [ "left" ]
+          }
+        }
+      ]
+    },
+    {
+      "type": "BlockGroup",
+      "hints": {
+        "category": [ "columns" ]
+      },
+      "blocks": [
+        {
+          "type": "Block",
+          "title": "Tue",
+          "subtitle": "62 / 52",
+          "images": [ "http://messagecardplayground.azurewebsites.net/assets/Mostly%20Cloudy-Square.png" ]
+        },
+        {
+          "type": "Block",
+          "title": "Wed",
+          "subtitle": "60 / 48",
+          "images": [ "http://messagecardplayground.azurewebsites.net/assets/Drizzle-Square.png" ]
+        },
+        {
+          "type": "Block",
+          "title": "Thu",
+          "subtitle": "59 / 49",
+          "images": [ "http://messagecardplayground.azurewebsites.net/assets/Mostly%20Cloudy-Square.png" ]
+        },
+        {
+          "type": "Block",
+          "title": "Fri",
+          "subtitle": "64 / 51",
+          "images": [ "http://messagecardplayground.azurewebsites.net/assets/Mostly%20Cloudy-Square.png" ]
+        }
+      ]
+    }
+  ]
+}

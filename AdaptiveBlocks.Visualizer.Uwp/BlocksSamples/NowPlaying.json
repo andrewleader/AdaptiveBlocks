@@ -1,0 +1,73 @@
+﻿{
+  "view": {
+    "content": {
+      "text": [
+        "Weekly Mix",
+        "20 songs, 1 hr 52 min"
+      ],
+      "images": [ "https://picsum.photos/250?image=1082" ],
+      "detailedBlocks": [
+        {
+          "view": {
+            "content": {
+              "text": [
+                "Weekly Mix",
+                "20 songs, 1 hr 52 min"
+              ],
+              "hints": {
+                "category": [ "featured" ]
+              }
+            }
+          }
+        },
+        {
+          "view": {
+            "content": {
+              "text": [
+                "Autumn Fever",
+                "Bascilica"
+              ],
+              "images": [ "https://picsum.photos/250?image=1072" ]
+            }
+          }
+        },
+        {
+          "view": {
+            "content": {
+              "text": [
+                "Urban",
+                "We Summit"
+              ],
+              "images": [ "https://picsum.photos/250?image=1077" ]
+            }
+          }
+        },
+        {
+          "view": {
+            "content": {
+              "text": [
+                "Flicker",
+                "Print Works"
+              ],
+              "images": [ "https://picsum.photos/250?image=1069" ]
+            }
+          }
+        }
+      ],
+      "actions": [
+        {
+          "type": "Action",
+          "title": "Previous"
+        },
+        {
+          "type": "Action",
+          "title": "Play"
+        },
+        {
+          "type": "Action",
+          "title": "Next"
+        }
+      ]
+    }
+  }
+}

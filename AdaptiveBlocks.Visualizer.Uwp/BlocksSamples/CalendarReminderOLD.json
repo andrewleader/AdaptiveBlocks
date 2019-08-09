@@ -1,0 +1,55 @@
+﻿{
+  "type": "Block",
+  "title": "Adaptive Tiles Meeting",
+  "subtitle": "Conf Room 2001 / Building 135\n10:00 AM - 10:30 AM",
+  "detailedBlocks": [
+    {
+      "type": "Block",
+      "title": "Adaptive Tiles Meeting",
+      "subtitle": "Conf Room 2001 / Building 135\n10:00 AM - 10:30 AM"
+    },
+    {
+      "type": "InteractiveBlock",
+      "inputs": [
+        {
+          "type": "ChoiceSet",
+          "id": "snoozeInterval",
+          "placeholder": "Select an option",
+          "choices": [
+            {
+              "title": "5 minutes",
+              "value": "5"
+            },
+            {
+              "title": "15 minutes",
+              "value": "15"
+            },
+            {
+              "title": "1 hour",
+              "value": "60"
+            },
+            {
+              "title": "3 hours",
+              "value": "180"
+            }
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "title": "Snooze",
+          "data": "snooze"
+        }
+      ]
+    },
+    {
+      "type": "InteractiveBlock",
+      "actions": [
+        {
+          "title": "Dismiss",
+          "data": "dismiss"
+        }
+      ]
+    }
+  ]
+}

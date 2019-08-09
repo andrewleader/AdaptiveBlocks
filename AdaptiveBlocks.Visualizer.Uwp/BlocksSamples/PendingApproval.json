@@ -1,0 +1,90 @@
+﻿{
+  "view": {
+    "content": {
+      "text": [
+        "Pending approval",
+        "Requested by Miguel Garcia"
+      ],
+      "images": [
+        {
+          "url": "http://connectorsdemo.azurewebsites.net/images/MSC12_Oscar_002.jpg",
+          "hints": {
+            "category": [ "profile" ]
+          }
+        }
+      ],
+      "detailedBlocks": [
+        {
+          "view": {
+            "content": {
+              "text": "Pending approval",
+              "hints": {
+                "category": [ "featured" ]
+              }
+            }
+          }
+        },
+        {
+          "view": {
+            "content": {
+              "text": [
+                "Requested by Miguel Garcia",
+                "m.garcia@contoso.com"
+              ],
+              "images": [
+                {
+                  "url": "http://connectorsdemo.azurewebsites.net/images/MSC12_Oscar_002.jpg",
+                  "hints": {
+                    "category": [ "profile" ]
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "view": {
+            "content": {
+              "text": [
+                "Date submitted",
+                "06/27/2017, 2:44 PM"
+              ]
+            }
+          },
+          "optional": true,
+          "hints": {
+            "factSet": true
+          }
+        },
+        {
+          "view": {
+            "content": {
+              "text": [
+                "Details",
+                "Please approve the awesome changes I made to this fantastic document."
+              ]
+            }
+          },
+          "optional": true,
+          "hints": {
+            "factSet": true
+          }
+        },
+        {
+          "view": {
+            "content": {
+              "text": [
+                "Link",
+                "Link to the awesome document.pptx"
+              ]
+            }
+          },
+          "optional": true,
+          "hints": {
+            "factSet": true
+          }
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,56 @@
+﻿{
+  "view": {
+    "content": {
+      "text": [
+        "10 scenic summer retreats",
+        "Relax from the stressful year with these gorgeous summer getaways"
+      ],
+      "images": [ "https://picsum.photos/250/250?image=1083" ],
+      "detailedBlocks": [
+        {
+          "view": {
+            "content": {
+              "text": [
+                "10 scenic summer retreats",
+                "Relax from the stressful year with these gorgeous summer getaways"
+              ],
+              "images": [ "https://picsum.photos/250/250?image=1083" ],
+              "hints": {
+                "category": [ "featured" ]
+              }
+            }
+          }
+        },
+        {
+          "view": {
+            "content": {
+              "text": [
+                "1. Kripalu Center for Yoga and Health R&R",
+                "Looking to personalize your getaway? The Kripalu Center is perfect!"
+              ],
+              "images": [ "https://picsum.photos/60?image=1075" ]
+            }
+          }
+        },
+        {
+          "view": {
+            "content": {
+              "text": [
+                "2. Exhale: A Kessler Wellness Experience",
+                "Escape on a two-night stay to a restored southern"
+              ],
+              "images": [ "https://picsum.photos/60?image=1074" ]
+            }
+          }
+        }
+      ]
+    },
+    "attributes": {
+      "attributionText": "msn.com",
+      "attributionIcon": {
+        "url": "https://www.shareicon.net/download/2016/08/01/639820_msn_512x512.png",
+        "supportedThemes": [ "light", "dark" ]
+      }
+    }
+  }
+}

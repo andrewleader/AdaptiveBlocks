@@ -1,0 +1,55 @@
+﻿<UserControl
+    x:Class="AdaptiveBlocks.Visualizer.Uwp.Controls.Designer.BlockControl"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:AdaptiveBlocks.Visualizer.Uwp.Controls.Designer"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    d:DesignHeight="300"
+    d:DesignWidth="400"
+    x:Name="ThisControl">
+
+    <StackPanel DataContext="{Binding AdaptiveBlock, ElementName=ThisControl}">
+        <Grid BorderBrush="Gray" BorderThickness="1" Padding="3">
+            <Grid.ContextFlyout>
+                <MenuFlyout>
+                    <MenuFlyoutItem
+                        x:Name="MenuItemDelete"
+                        Text="Delete"
+                        Click="MenuItemDelete_Click"/>
+                </MenuFlyout>
+            </Grid.ContextFlyout>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <SymbolIcon
+                Symbol="Document"
+                Height="24"
+                Width="24" Margin="0,0,3,0"/>
+            <ItemsControl
+                Grid.Column="1"
+                ItemsSource="{Binding View.Content.Text}">
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <TextBlock
+                            Text="{Binding Text}"/>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+        </Grid>
+
+        <ItemsControl
+            ItemsSource="{Binding View.Content.DetailedBlocks}"
+            Margin="12,0,0,0">
+            <ItemsControl.ItemTemplate>
+                <DataTemplate>
+                    <local:BlockControl
+                        AdaptiveBlock="{Binding}"
+                        BlocksDocumentViewModel="{Binding BlocksDocumentViewModel, ElementName=ThisControl}"/>
+                </DataTemplate>
+            </ItemsControl.ItemTemplate>
+        </ItemsControl>
+    </StackPanel>
+</UserControl>

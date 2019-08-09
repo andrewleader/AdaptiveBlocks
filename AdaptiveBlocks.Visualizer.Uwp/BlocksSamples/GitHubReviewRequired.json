@@ -1,0 +1,59 @@
+﻿{
+  "view": {
+    "content": {
+      "text": [
+        {
+          "text": "Review required",
+          "hints": {
+            "color": [ "attention" ]
+          }
+        },
+        {
+          "text": "At least 1 approving review is required by reviewers with write access.",
+          "markdownText": "At least 1 approving review is required by reviewers with write access. [Learn more](https://github.com)."
+        }
+      ],
+      "images": [
+        {
+          "url": "http://xyzwebsite.blob.core.windows.net/us-website/x-icon.png",
+          "requires": "Image.hints.backgroundColor",
+          "hints": {
+            "backgroundColor": "#FF0000"
+          },
+          "fallback": {
+            "url": "http://xyzwebsite.blob.core.windows.net/us-website/x-icon-with-background.png"
+          }
+        },
+        {
+          "url": "http://xyzwebsite.blob.core.windows.net/us-website/x-icon.png",
+          "backgroundColor": "attention",
+          "svg": {
+            "width": 12,
+            "height": 16,
+            "paths": [
+              {
+                "fill-rule": "evenodd",
+                "data": "M 7.48 8 l 3.75 3.75 l -1.48 1.48 L 6 9.48 l -3.75 3.75 l -1.48 -1.48 L 4.52 8 L 0.77 4.25 l 1.48 -1.48 L 6 6.52 l 3.75 -3.75 l 1.48 1.48 L 7.48 8 Z"
+              }
+            ],
+            "color": "#FFFFFF"
+          },
+          "hints": {
+            "category": [ "icon" ]
+          }
+        }
+      ],
+      "actions": [
+        {
+          "type": "Action",
+          "title": "Add your review"
+        },
+        {
+          "type": "Action",
+          "title": "Learn more",
+          "when": "!markdown"
+        }
+      ]
+    }
+  }
+}

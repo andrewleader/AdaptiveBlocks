@@ -1,0 +1,31 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:controls="using:AdaptiveBlocks.Visualizer.Uwp.Controls">
+
+    <ResourceDictionary.MergedDictionaries>
+
+        <ResourceDictionary>
+
+            <Style TargetType="controls:CircleImage">
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="controls:CircleImage">
+                            <Grid>
+                                <Ellipse HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                                    <Ellipse.Fill>
+                                        <ImageBrush ImageSource="{Binding Source, RelativeSource={RelativeSource Mode=TemplatedParent}}" Stretch="UniformToFill"/>
+                                    </Ellipse.Fill>
+                                </Ellipse>
+                                <Ellipse HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Opacity="{TemplateBinding OverlayOpacity}" Fill="Black"/>
+                            </Grid>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+
+        </ResourceDictionary>
+        
+    </ResourceDictionary.MergedDictionaries>
+    
+</ResourceDictionary>

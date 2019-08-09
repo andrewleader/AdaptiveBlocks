@@ -1,0 +1,59 @@
+﻿{
+  "view": {
+    "content": {
+      "text": [
+        "Angela Chin",
+        "Video call ᛫ 1 m 40 s"
+      ],
+      "images": [
+        {
+          "url": "https://picsum.photos/500?image=1027",
+          "hints": {
+            "category": [ "profile" ]
+          }
+        }
+      ]
+    },
+    "richContent": [
+      {
+        "targetedExperiences": [ "Microsoft.UserActivities.Hero" ],
+        "contentType": "application/vnd.microsoft.card.adaptive",
+        "content": {
+          "type": "AdaptiveCard",
+          "backgroundImage": "https://picsum.photos/500?image=1027",
+          "verticalContentAlignment": "bottom",
+          "body": [
+            {
+              "type": "TextBlock",
+              "text": "",
+              "size": "Large"
+            },
+            {
+              "type": "TextBlock",
+              "text": "",
+              "size": "medium"
+            },
+            {
+              "type": "TextBlock",
+              "size": "Large",
+              "text": "Angela Chin",
+              "weight": "bolder"
+            },
+            {
+              "type": "TextBlock",
+              "spacing": "none",
+              "text": "Video call"
+            },
+            {
+              "type": "TextBlock",
+              "spacing": "none",
+              "text": "1 m 40 s"
+            }
+          ],
+          "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+          "version": "1.0"
+        }
+      }
+    ]
+  }
+}

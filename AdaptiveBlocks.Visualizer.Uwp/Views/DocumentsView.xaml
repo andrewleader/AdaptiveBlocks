@@ -1,0 +1,223 @@
+﻿<UserControl
+    x:Class="AdaptiveBlocks.Visualizer.Uwp.Views.DocumentsView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:NotificationsVisualizer.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    d:DesignHeight="300"
+    d:DesignWidth="400"
+    xmlns:converters="using:AdaptiveBlocks.Visualizer.Uwp.Converters"
+    xmlns:views="using:AdaptiveBlocks.Visualizer.Uwp.Views">
+
+    <UserControl.Resources>
+        <Style x:Key="CommandButton" TargetType="Button">
+            <Setter Property="Margin" Value="5,0,0,0"/>
+        </Style>
+
+        <converters:DocumentViewModelToPreviewPaneConverter x:Key="DocumentViewModelToPreviewPaneConverter"/>
+    </UserControl.Resources>
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Visibility="{Binding IsEnabled, Converter={StaticResource BoolToVisibilityConverter}}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!--Top buttons-->
+        <CommandBar x:Name="CommandBarTop" Opening="CommandBar_Opening" Closing="CommandBar_Closing">
+            <CommandBar.Content>
+                <StackPanel x:Name="StackPanelMainAppBarButtons" Orientation="Horizontal">
+                    <AppBarButton
+                        Icon="Add"
+                        Label="Add document"
+                        x:Name="AppBarNew"
+                        IsCompact="True">
+                        <AppBarButton.Flyout>
+                            <Flyout x:Name="FlyoutAddDocument">
+                                <ListView
+                                    x:Name="ListViewAddDocumentItems"
+                                    ItemsSource="{Binding AddDocumentItems}"
+                                    DisplayMemberPath="DisplayName"
+                                    SelectionMode="None"
+                                    IsItemClickEnabled="True"
+                                    ItemClick="ListViewAddDocumentItems_ItemClick"/>
+                            </Flyout>
+                        </AppBarButton.Flyout>
+                    </AppBarButton>
+                    <AppBarButton
+                        x:Name="AppBarSave"
+                        Icon="Save"
+                        Label="Save file"
+                        Click="AppBarSave_Click"
+                        IsCompact="True"/>
+                    <AppBarButton
+                        x:Name="AppBarShare"
+                        Icon="Share"
+                        Label="Share to experiences"
+                        IsCompact="True">
+                        <AppBarButton.Flyout>
+                            <MenuFlyout>
+                                <MenuFlyout.Items>
+                                    <MenuFlyoutItem
+                                        x:Name="ShareToAll"
+                                        Text="Share to all experiences"
+                                        Click="ShareToAll_Click"/>
+                                    <MenuFlyoutItem
+                                        x:Name="ShareToToastNotification"
+                                        Text="Toast Notification"
+                                        Click="ShareToToastNotification_Click"/>
+                                    <MenuFlyoutItem
+                                        x:Name="ShareToUserActivities"
+                                        Text="User Activities"
+                                        Click="ShareToUserActivities_Click"/>
+                                </MenuFlyout.Items>
+                            </MenuFlyout>
+                        </AppBarButton.Flyout>
+                    </AppBarButton>
+                </StackPanel>
+            </CommandBar.Content>
+            <CommandBar.SecondaryCommands>
+                <AppBarButton
+                        x:Name="AppBarSaveAs"
+                        Icon="SaveLocal"
+                        Label="Save as"
+                        Click="AppBarSaveAs_Click"/>
+            </CommandBar.SecondaryCommands>
+        </CommandBar>
+
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="140"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <!--Tabs-->
+            <ListView
+                x:Name="ListViewTabs"
+                SelectionChanged="ListViewTabs_SelectionChanged"
+                Background="{ThemeResource SystemControlBackgroundChromeMediumLowBrush}"
+                ItemContainerStyle="{StaticResource HorizontalListViewItemContainerStyle}"
+                AllowDrop="True"
+                CanReorderItems="True">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <views:TabView />
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+            <!--Content-->
+            <Grid x:Name="Content" Grid.Column="1" SizeChanged="Content_SizeChanged">
+                <Grid x:Name="PivotAndSplitContent" RequestedTheme="Light" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+                    <Grid RequestedTheme="Light" x:Name="NormalContentGrid">
+
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="450" />
+                        </Grid.ColumnDefinitions>
+
+                        <Border x:Name="GridEditorContainer">
+                            <!--Document column-->
+                            <Border x:Name="EditorColumn" Margin="0,0,0,0">
+                                <views:DocumentView
+                                    DataContext="{Binding CurrentDocument}"
+                                    Visibility="{Binding CurrentDocument, Converter={StaticResource NotNullToVisibilityConverter}}"/>
+                            </Border>
+                        </Border>
+
+                        <Border x:Name="GridPreviewContainer" Grid.Column="1">
+                            <Border x:Name="PreviewColumn">
+                                <Border
+                                    Background="{ThemeResource SystemControlBackgroundChromeMediumLowBrush}"
+                                    Padding="10,10,10,0"
+                                    Child="{Binding CurrentDocument, Converter={StaticResource DocumentViewModelToPreviewPaneConverter}}"/>
+                            </Border>
+                        </Border>
+
+                    </Grid>
+
+                    <Pivot
+                    x:Name="MainPivot"
+                    Visibility="Collapsed"
+                    RequestedTheme="Light">
+
+                        <PivotItem
+                            x:Name="PivotItemEditor"
+                            Header="Editor">
+                            <Border x:Name="EditorPivot"/>
+                        </PivotItem>
+
+                        <PivotItem
+                            x:Name="PivotItemPreview"
+                            Header="Preview">
+                            <Border x:Name="PreviewPivot"/>
+                        </PivotItem>
+
+                    </Pivot>
+
+                </Grid>
+
+                <!--Full content-->
+                <Border x:Name="FullContent" RequestedTheme="Light" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Visibility="Collapsed">
+                </Border>
+            </Grid>
+
+        </Grid>
+
+        <!--No document content-->
+        <Grid Grid.RowSpan="2" Background="{ThemeResource SystemControlBackgroundChromeMediumLowBrush}" Visibility="{Binding CurrentDocument, Converter={StaticResource NotNullToVisibilityConverter}, ConverterParameter=Invert}">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <TextBlock
+                    HorizontalAlignment="Center"
+                    Text="{Binding CategoryTitle}"
+                    Style="{ThemeResource SubheaderTextBlockStyle}"
+                    Margin="24,48,24,24"/>
+
+                <ListView
+                    Grid.Row="1"
+                    MaxWidth="350"
+                    Margin="24,0,24,0"
+                    Padding="0,0,0,24"
+                    ItemsSource="{Binding AddDocumentItems}"
+                    DisplayMemberPath="DisplayName"
+                    SelectionMode="None"
+                    IsItemClickEnabled="True"
+                    ItemClick="ListViewAddDocumentItems_ItemClick"/>
+            </Grid>
+        </Grid>
+
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup>
+
+                <VisualState x:Name="Compact">
+                    <VisualState.Setters>
+                        <Setter Target="MainPivot.Visibility" Value="Visible"/>
+                        <Setter Target="NormalContentGrid.Visibility" Value="Collapsed"/>
+                    </VisualState.Setters>
+                </VisualState>
+
+                <VisualState x:Name="SemiCompact">
+                    <VisualState.Setters>
+                        <Setter Target="MainPivot.Visibility" Value="Visible"/>
+                        <Setter Target="NormalContentGrid.Visibility" Value="Collapsed"/>
+                    </VisualState.Setters>
+                </VisualState>
+
+                <VisualState x:Name="Normal">
+                    <VisualState.Setters>
+                    </VisualState.Setters>
+                </VisualState>
+
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
+
+    </Grid>
+</UserControl>

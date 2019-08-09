@@ -1,0 +1,244 @@
+﻿{
+  "view": {
+    "content": {
+      "text": [
+        "How likely would you be to refer someone to work here?"
+      ],
+      "images": [
+        {
+          "url": "https://messagecardplayground.azurewebsites.net/assets/TINYPulseQuestionIcon.png",
+          "hints": {
+            "category": [ "icon" ]
+          }
+        }
+      ],
+      "actions": [
+        {
+          "type": "Action",
+          "title": "Respond anonymously",
+          "inputs": [
+            {
+              "type": "ChoiceSet",
+              "id": "choice",
+              "placeholder": "Select an option",
+              "choices": [
+                {
+                  "title": "Very likely",
+                  "value": "5"
+                },
+                {
+                  "title": "Undecided",
+                  "value": "3"
+                },
+                {
+                  "title": "Very unlikely",
+                  "value": "1"
+                }
+              ]
+            },
+            {
+              "type": "TextInput",
+              "id": "elaboration",
+              "placeholder": "Feel free to elaborate"
+            }
+          ]
+        }
+      ]
+    },
+    "richContent": [
+      {
+        "targetedExperiences": [ "Microsoft.Outlook.ActionableMessage" ],
+        "contentType": "application/vnd.microsoft.card.adaptive",
+        "content": {
+          "$schema": "https://adaptivecards.io/schemas/adaptive-card.json",
+          "type": "AdaptiveCard",
+          "version": "1.0",
+          "style": "emphasis",
+          "body": [
+            {
+              "type": "Container",
+              "bleed": true,
+              "items": [
+                {
+                  "type": "ColumnSet",
+                  "columns": [
+                    {
+                      "width": "auto",
+                      "verticalContentAlignment": "center",
+                      "items": [
+                        {
+                          "type": "Image",
+                          "height": "30px",
+                          "url": "https://cdn2.hubspot.net/hubfs/443262/header_assets/engage_logo.png?t=1459547965461"
+                        }
+                      ]
+                    },
+                    {
+                      "width": "stretch",
+                      "verticalContentAlignment": "center",
+                      "items": [
+                        {
+                          "type": "TextBlock",
+                          "text": "All survey responses are anonymous. [Learn more](https://www.tinypulse.com)",
+                          "horizontalAlignment": "right",
+                          "wrap": true
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "Container",
+              "style": "default",
+              "items": [
+                {
+                  "type": "ColumnSet",
+                  "horizontalAlignment": "center",
+                  "columns": [
+                    {
+                      "width": "48px",
+                      "verticalContentAlignment": "center",
+                      "items": [
+                        {
+                          "type": "Image",
+                          "spacing": "large",
+                          "url": "https://messagecardplayground.azurewebsites.net/assets/TINYPulseQuestionIcon.png",
+                          "horizontalAlignment": "center"
+                        }
+                      ]
+                    },
+                    {
+                      "width": "stretch",
+                      "verticalContentAlignment": "center",
+                      "items": [
+                        {
+                          "type": "TextBlock",
+                          "spacing": "large",
+                          "size": "large",
+                          "text": "**How likely would you be to refer someone to work here?**",
+                          "wrap": true
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "Input.ChoiceSet",
+                  "placeholder": "Select an option",
+                  "id": "choiceinputid",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "title": "1 - Extremely unlikely \"I would physically deter them down to my last breath\"",
+                      "value": "1"
+                    },
+                    {
+                      "title": "2",
+                      "value": "2"
+                    },
+                    {
+                      "title": "3",
+                      "value": "3"
+                    },
+                    {
+                      "title": "4",
+                      "value": "4"
+                    },
+                    {
+                      "title": "5",
+                      "value": "5"
+                    },
+                    {
+                      "title": "6",
+                      "value": "6"
+                    },
+                    {
+                      "title": "7",
+                      "value": "7"
+                    },
+                    {
+                      "title": "8",
+                      "value": "8"
+                    },
+                    {
+                      "title": "9",
+                      "value": "9"
+                    },
+                    {
+                      "title": "10 - Extremely likely (\"It's the best place to work\")",
+                      "value": "10"
+                    }
+                  ]
+                },
+                {
+                  "type": "Input.Text",
+                  "isMultiline": true,
+                  "id": "textinputid",
+                  "placeholder": "Feel free to elaborate"
+                },
+                {
+                  "type": "ActionSet",
+                  "horizontalAlignment": "center",
+                  "actions": [
+                    {
+                      "type": "Action.Http",
+                      "title": "Respond anonymously",
+                      "method": "POST",
+                      "body": "{{choiceinputid.value}}",
+                      "url": "https://messagecardplaygroundfn.azurewebsites.net/api/HttpPost?code=zJaYHdG4dZdPK0GTymwYzpaCtcPAPec8fTvc2flJRvahwigYWg3p0A==&message=The feedback was updated successfully"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "Container",
+              "items": [
+                {
+                  "type": "ColumnSet",
+                  "columns": [
+                    {
+                      "width": "stretch",
+                      "verticalContentAlignment": "center",
+                      "items": [
+                        {
+                          "type": "TextBlock",
+                          "text": "**Streak:**"
+                        },
+                        {
+                          "type": "TextBlock",
+                          "spacing": "none",
+                          "text": "**0** survey(s) in a row"
+                        }
+                      ]
+                    },
+                    {
+                      "width": "stretch",
+                      "verticalContentAlignment": "center",
+                      "items": [
+                        {
+                          "type": "TextBlock",
+                          "text": "Having trouble?",
+                          "horizontalAlignment": "right"
+                        },
+                        {
+                          "type": "TextBlock",
+                          "spacing": "none",
+                          "text": "[Click here](https://www.tinypulse.com) to go to TINYPulse to respond",
+                          "horizontalAlignment": "right",
+                          "wrap": true
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      }
+    ]
+  }
+}
