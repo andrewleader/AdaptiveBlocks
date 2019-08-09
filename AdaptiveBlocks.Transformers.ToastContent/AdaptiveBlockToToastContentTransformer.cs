@@ -4,8 +4,10 @@ using System.Linq;
 using System.Threading.Tasks;
 using AdaptiveBlocks.Actions;
 using AdaptiveBlocks.Attributes;
+using AdaptiveBlocks.Commands;
 using AdaptiveBlocks.Inputs;
 using Microsoft.Toolkit.Uwp.Notifications;
+using Newtonsoft.Json;
 
 namespace AdaptiveBlocks.Transformers.ToastContentTransformer
 {
@@ -105,11 +107,9 @@ namespace AdaptiveBlocks.Transformers.ToastContentTransformer
                             {
                                 PlaceholderContent = singleTextInput.Placeholder
                             });
-                            toastActions.Buttons.Add(new ToastButton(singleFinalAction.Title, "args")
-                            {
-                                TextBoxId = singleTextInput.Id,
-                                ImageUri = singleFinalAction.Icon?.GetIconForTheme(AdaptiveThemes.Dark)?.Url
-                            });
+                            var button = CreateButton(singleFinalAction);
+                            button.TextBoxId = singleTextInput.Id;
+                            toastActions.Buttons.Add(button);
                         }
                         else
                         {
@@ -154,7 +154,7 @@ namespace AdaptiveBlocks.Transformers.ToastContentTransformer
 
                             foreach (var finalAction in finalActions)
                             {
-                                toastActions.Buttons.Add(new ToastButton(finalAction.Title, "args"));
+                                toastActions.Buttons.Add(CreateButton(finalAction));
                             }
                         }
                     }
@@ -163,6 +163,34 @@ namespace AdaptiveBlocks.Transformers.ToastContentTransformer
 
             result.Result = content;
             return Task.CompletedTask;
+        }
+
+        private static ToastButton CreateButton(AdaptiveAction action)
+        {
+            string args;
+            ToastActivationType activationType;
+
+            if (action.Command is AdaptiveOpenUrlCommand openUrlCommand)
+            {
+                args = openUrlCommand.Url;
+                activationType = ToastActivationType.Protocol;
+            }
+            else if (action.Command == null)
+            {
+                args = "args";
+                activationType = ToastActivationType.Foreground;
+            }
+            else
+            {
+                args = JsonConvert.SerializeObject(action.Command);
+                activationType = ToastActivationType.Background;
+            }
+
+            return new ToastButton(action.Title, args)
+            {
+                ActivationType = activationType,
+                ImageUri = action.Icon?.GetIconForTheme(AdaptiveThemes.Dark)?.Url
+            };
         }
 
         private AdaptiveGroup CreateGroup(AdaptiveBlockContent block)
