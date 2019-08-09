@@ -33,10 +33,9 @@
             }
           ],
           "command": {
-            "type": "HttpRequest",
+            "type": "Command.Http",
             "method": "POST",
-            "url": "https://skype.com/sendreply",
-            "requiresAuth": true
+            "url": "https://interactivenotifs.azurewebsites.net/api/postback"
           }
         }
       ]
