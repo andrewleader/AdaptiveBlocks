@@ -20,7 +20,8 @@ namespace AdaptiveBlocks.Commands
             // TODO: Should this be a static? It makes it impossible to have diff renderers support different elements
             var types = new Dictionary<string, Type>
             {
-                ["Command.Http"] = typeof(AdaptiveHttpCommand)
+                ["Command.Http"] = typeof(AdaptiveHttpCommand),
+                ["Command.OpenUrl"] = typeof(AdaptiveOpenUrlCommand)
             };
             return types;
         });
