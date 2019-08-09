@@ -1,4 +1,5 @@
 ﻿using AdaptiveBlocks.Attributes;
+using AdaptiveBlocks.Commands;
 using AdaptiveBlocks.Speech;
 using System;
 using System.Collections.Generic;
@@ -15,6 +16,8 @@ namespace AdaptiveBlocks.Actions
         public override string Type => "Action";
 
         public AdaptiveBlockAttributionIcon Icon { get; set; }
+
+        public BaseAdaptiveCommand Command { get; set; }
 
         public override IEnumerable<AdaptiveAction> GetSimplifiedActions()
         {
